@@ -1,2 +1,3 @@
-# Pet-skin-vat-VQA
-DeepLearning | NLP | MultiModal | VQA
+# Pet-skin-ImageCaptioning
+
+DeepLearning | NLP | MultiModal | ImageCaptioning
