@@ -1,4 +1,4 @@
-
+### 네이버 지식인 답변 URL 리스트 크롤리
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
