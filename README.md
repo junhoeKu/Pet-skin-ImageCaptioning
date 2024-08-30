@@ -47,5 +47,5 @@
 - **모바일 앱 확장을 통한 접근성 증대**
 
 ## 🧹 6. 참조
-- **프로젝트 리포지터리** : [GitHub Link]([#https://ankur3107.github.io/blogs/the-illustrated-image-captioning-using-transformers/])
+- **프로젝트 리포지터리** : [GitHub Link](https://ankur3107.github.io/blogs/the-illustrated-image-captioning-using-transformers/)
 - **관련 연구 자료** : [학술 자료 링크](#)
