@@ -2,32 +2,19 @@
 
 ## 모델 사용법
 ```python
-import torch
-from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+from transformers import pipeline
 
-## Set up the device (GPU or CPU)
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+def generate_caption(image_url, model_name="sihoon00/multimodla-Bitamin", max_new_tokens=150):
+    captioner = pipeline("image-to-text", model=model_name)
+    result = captioner(image_url, max_new_tokens=max_new_tokens)
+    return result[0]["generated_text"]
 
-## Load the tokenizer and model
-tokenizer = AutoTokenizer.from_pretrained("Junhoee/Kobart-Jeju-translation")
-model = AutoModelForSeq2SeqLM.from_pretrained("Junhoee/Kobart-Jeju-translation").to(device)
-
-## Set up the input text
-## 문장 입력 전에 방향에 맞게 [제주] or [표준] 토큰을 입력 후 문장 입력
-input_text = "[표준] 안녕하세요"
-
-## Tokenize the input text
-input_ids = tokenizer(input_text, return_tensors="pt", padding=True, truncation=True).input_ids.to(device)
-
-## Generate the translation
-outputs = model.generate(input_ids, max_length=64)
-
-## Decode and print the output
-decoded_output = tokenizer.decode(outputs[0], skip_special_tokens=True)
-print("Model Output:", decoded_output)
+image_url = 'https://img.lifet.co.kr/07f3f846-edf1-4d24-87e2-10d6930b5794'
+caption = generate_caption(image_url)
+print(caption)
 ```
 ```java
-Model Output: 안녕하수꽈
+Model Output: 해당 사진은 외이염으로 보입니다. 외이염은 ...
 ```
 
 ## 🎯 1. 프로젝트 소개
