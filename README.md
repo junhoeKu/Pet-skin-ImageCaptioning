@@ -9,6 +9,7 @@ def generate_caption(image_url, model_name="sihoon00/multimodla-Bitamin", max_ne
     result = captioner(image_url, max_new_tokens=max_new_tokens)
     return result[0]["generated_text"]
 
+## 여기에 올바른 이미지 url을 입력하면 캡션이 생성됩니다.
 image_url = 'https://img.lifet.co.kr/07f3f846-edf1-4d24-87e2-10d6930b5794'
 caption = generate_caption(image_url)
 print(caption)
