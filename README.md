@@ -14,7 +14,7 @@ image_url = 'https://img.lifet.co.kr/07f3f846-edf1-4d24-87e2-10d6930b5794'
 caption = generate_caption(image_url)
 print(caption)
 ```
-```java
+```python
 Model Output: 해당 사진은 외이염으로 보입니다. 외이염은 ...
 ```
 ## 🏅나의 역할
