@@ -17,6 +17,7 @@ print(caption)
 ```python
 Model Output: 해당 사진은 외이염으로 보입니다. 외이염은 ...
 ```
+
 ## 🏅나의 역할
 - **Dataset Crawling & Preprocessing**
   - Crawling
